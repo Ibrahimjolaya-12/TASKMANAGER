@@ -1,5 +1,6 @@
 import express from 'express';
 import cors from 'cors';
+import dns from "dns"
 import cookieParser from 'cookie-parser';
 import authRoutes from './routes/authRoutes.js';
 import workspaceRoutes from './routes/workspaceRoutes.js';
@@ -17,6 +18,10 @@ app.use(
     credentials: true,
   })
 );
+
+if(process.env.ENV !== "production"){
+  dns.setServers(["8.8.8.8", "1.1.1.1"])
+}
 
 app.get('/api/health', (_req, res) => res.json({ success: true, status: 'healthy' }));
 
