@@ -12,7 +12,9 @@ const app = express();
 
 const allowedOrigins = [
   'http://localhost:5173', // Local testing ke liye
-  'https://workspace-manager-wine.vercel.app' // Tumhara live Vercel frontend URL
+  'https://workspace-manager-wine.vercel.app', // Tumhara live Vercel frontend URL
+  'http://localhost:5173',
+  'https://taskmanager-frontend-wine-zeta.vercel.app' // Yeh wala exact URL daalo
 ];
 
 app.use(cors({
