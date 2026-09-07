@@ -10,7 +10,7 @@ import { notFound, errorHandler } from './middleware/error.js';
 
 const app = express();
 
-aconst allowedOrigins = [
+const allowedOrigins = [
   'http://localhost:5173', // Local testing ke liye
   'https://workspace-manager-wine.vercel.app' // Tumhara live Vercel frontend URL
 ];
