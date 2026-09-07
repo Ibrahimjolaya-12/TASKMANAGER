@@ -10,6 +10,11 @@ import { notFound, errorHandler } from './middleware/error.js';
 
 const app = express();
 
+
+// Yeh line lazmi add karo taake JSON data parse ho sakay
+app.use(express.json());
+app.use(cookieParser());
+
 const allowedOrigins = [
   'http://localhost:5173', // Local testing ke liye
   'https://workspace-manager-wine.vercel.app', // Tumhara live Vercel frontend URL
